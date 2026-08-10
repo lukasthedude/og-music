@@ -83,6 +83,10 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  br.d {
+    display: none;
+  }
+
   h1 {
     font-size: 34px;
     line-height: 1.3;
