@@ -26,8 +26,13 @@
     <div class="pitch">
       <p>OG exists to honor the craft of music. <br class="d">It has every important capability that all <br class="d">other major streaming apps have, but <br class="d">it intentionally cuts back on the sheer <br class="d">amount of interface in people's faces.</p>
       <p>The app is currently&nbsp;in a private <br class="d">TestFlight beta.</p>
-      <a class="cta" href="https://testflight.apple.com/join/Vm8CemC4" target="_blank" rel="noopener">Testflight Beta</a>
+      <button class="cta" type="button" id="beta">Testflight Beta</button>
+      <form class="unlock" id="unlock" hidden>
+        <input type="password" placeholder="Password" aria-label="Password" autocomplete="off" required>
+        <button class="cta" type="submit">Open</button>
+      </form>
     </div>
   </main>
+  <script src="assets/beta.js" defer></script>
 </body>
 </html>

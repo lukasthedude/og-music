@@ -82,6 +82,56 @@ h1 {
   opacity: 0.9;
 }
 
+button.cta {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The TestFlight button's password, in its place. */
+.unlock {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 4px;
+}
+
+.unlock input {
+  width: 200px;
+  height: 46px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font: 600 16px "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  outline: none;
+}
+
+.unlock input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.unlock input:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.unlock .cta {
+  margin-left: 0;
+}
+
+.unlock.wrong {
+  animation: shake 0.35s;
+}
+
+@keyframes shake {
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
 @media (max-width: 768px) {
   br.d {
     display: none;
@@ -113,7 +163,12 @@ h1 {
     margin-bottom: 40px;
   }
 
-  .cta {
+  .cta,
+  .unlock {
     margin-left: 0;
+  }
+
+  .unlock input {
+    width: 190px;
   }
 }
